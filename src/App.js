@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+import "./index.css";
+import Main from "./Components/Main";
+import BookDetails from './Components/BookDetails';
+import store from './Components/Store';
 
-function App() {
+const App = () => {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Provider store={store}>
+        <div className="App">
+          <h1 className="header text-center p-3" id="header-text">
+            My BookList
+          </h1>
+          <Switch>
+            <Route path="/" exact component={Main} />
+            <Route path={`/:bookName`} exact component={BookDetails} />
+          </Switch>
+        </div>
+      </Provider>
+    </Router>
   );
 }
 

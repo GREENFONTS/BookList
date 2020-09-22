@@ -5,9 +5,87 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#header-text{
+  color:#444;
+  margin-bottom: 20px;
+}
+
+#books-container{
+  box-sizing: border-box;
+  height: 100%;
+}
+#BookList{
+  margin: 10px;
+  padding: 7px;
+  border-radius: 4px;
+  border: 2px solid #880E4F;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #880E4F;
+  font-weight: 500;
+  font-size: 20px;
+  list-style: none;
+  text-decoration-style: none;
+  width: fit-content;
+}
+
+form{
+  bottom: 0; 
+  background: #fff;
+  height: fit-content;
+}
+
+form .form-group{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-gap: 1px; 
+ }  
+
+ form label{
+  text-align: right;
+  padding: 2px;
+} 
+form select, form input{
+  padding: 2px;
+  margin: 2px;
+  box-sizing: border-box;
+}  
+
+#addbutton {
+  color: #fff;
+  font-size: 2em;
+  background: #AD1457;
+  border: 0;
+  padding: 0 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  left: 25px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+#book-Display{
+  background: #be1f64;
+  top: 0;
+  right: 0px;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  height: 90vh;
+  margin-bottom: 10px;
+}
+
+#Book-Details h3{
+  font-size: 35px;
+  font-size: 600;
+}
+
+#Book-Details p, #Book-Details h5,  #Book-Details ul li{
+  font-size: 20px;
+  font-size: 500;
 }
